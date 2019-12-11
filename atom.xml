@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-10T08:48:05.074Z</updated>
+  <updated>2019-12-11T13:59:36.331Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,17 +17,57 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Mining Software Data for Better Software Quality</title>
+    <link href="http://yoursite.com/2019/12/11/Mining-Software-Data-for-Better-Software-Quality/"/>
+    <id>http://yoursite.com/2019/12/11/Mining-Software-Data-for-Better-Software-Quality/</id>
+    <published>2019-12-11T13:57:55.000Z</published>
+    <updated>2019-12-11T13:59:36.331Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mining Software Repositories in the age of AI</title>
+    <link href="http://yoursite.com/2019/12/11/Mining-Software-Repositories-in-the-age-of-AI/"/>
+    <id>http://yoursite.com/2019/12/11/Mining-Software-Repositories-in-the-age-of-AI/</id>
+    <published>2019-12-11T07:52:40.000Z</published>
+    <updated>2019-12-11T14:50:18.187Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Mining-Software-Repositories-in-the-age-of-AI"><a href="#Mining-Software-Repositories-in-the-age-of-AI" class="headerlink" title="Mining Software Repositories in the age of AI"></a>Mining Software Repositories in the age of AI</h1><p>此文在我个人理解之上总结的，同时也并不是完整的报告内容，只是其中一部分，如有错误，恳请指正。</p><h2 id="概念简介"><a href="#概念简介" class="headerlink" title="概念简介"></a>概念简介</h2><ul><li><p>Code Smell</p><p>Code Smell中文译名一般为“代码异味”，或“代码味道”，它是提示代码中某个地方存在错误的一个暗示，开发人员可以通过这种smell（异味）在代码中追捕到问题。</p><p>在计算机编程社区中,code smell代表了任何标志着事物变坏的征兆。它常常标志代码应该被refactored或者全部的设计都应该被reviewed。这个短语出现在 WardsWiki上，它是被Kent Beck杜撰出来的。在refactoring兴起之后，这个短语的使用率骤增。</p><p>判断是否存在code smell经常是主观判断，并且随着语言、开发者、开发理论的不同而存在差异。</p><p>经验丰富和知识渊博的开发人员通过对优秀设计有一种“感觉”，他们已经达到一种称之为“无意识能力 （UnconsciousCompetence）”的状态。也就是说，他们无需思考，只要通过查看代码或一段设计就可以立马对这个项目的代码质量有一种 “感觉”，能够对代码设计的优劣有一个大致的判断。</p><p>但大家需要注意，code smell只是一种“暗示”，而非一种“确定”。将某些事物称之为“code smell”并未是一种攻击；它只是一种提示：开发人员需要对项目设计进行更进一步的查看。因此，code smell更多是“直觉的，本能的”。</p></li><li><p>Anti-pattern </p><p>反模式：告诉你在开发、设计、管理中不要采用的糟糕的解决方案。<br>与优秀的改进型模式相反，反模式告诉我们避免这些糟糕的模式采用优秀的模式。</p><p>主要有这些反模式：</p><ul><li>Organizational anti-patterns</li><li>Project management anti-patterns</li><li>Analysis anti-patterns</li><li>Software design anti-patterns（Object-oriented design anti-patterns）</li><li>Programming anti-patterns</li><li>Methodological anti-patterns</li><li>Configuration management anti-patterns</li></ul></li></ul><h2 id="利用深度学习进行代码异味检测"><a href="#利用深度学习进行代码异味检测" class="headerlink" title="利用深度学习进行代码异味检测"></a>利用深度学习进行代码异味检测</h2><h3 id="CNN"><a href="#CNN" class="headerlink" title="CNN"></a>CNN</h3><p><a href="https://arxiv.org/pdf/1910.07658.pdf" target="_blank" rel="noopener">Deep Learning Anti-patterns from Code Metrics History</a></p><p>使用卷积神经网络(CNN)捕获修订历史(revision history)中的结构代码变更。</p><p><img src="/2019/12/11/Mining-Software-Repositories-in-the-age-of-AI/image-1.png" alt="image-1"></p><p>关于源代码的历史信息的改变极大地提高了检测性能。</p><p><img src="/2019/12/11/Mining-Software-Repositories-in-the-age-of-AI/image-2.png" alt="image-2"></p><p>CNN的表现也优于传统的ML模型。</p><p><img src="/2019/12/11/Mining-Software-Repositories-in-the-age-of-AI/image-3.png" alt="image-3"></p><h3 id="RNN"><a href="#RNN" class="headerlink" title="RNN"></a>RNN</h3><p><a href="https://arxiv.org/pdf/1712.09835.pdf" target="_blank" rel="noopener">Connecting Software Metrics across Versions to Predict Defects</a></p><p>利用递归神经网络(RNN)捕获度量变化序列（sequences of metrics changes）</p><p><img src="/2019/12/11/Mining-Software-Repositories-in-the-age-of-AI/image-4.png" alt="image-4"></p><p><strong>HVSM</strong>: Historical Version Sequence of Metrics</p><p>(a) constructing the historical version sequence of each file in our projects</p><p>(b) extracting the HVSM of each file from its version sequence</p><p>(c) leveraging RNN to predict file-level defects using the extracted HVSMs</p><p><img src="/2019/12/11/Mining-Software-Repositories-in-the-age-of-AI/image-5.png" alt="image-5"></p><p>与使用代码和过程度量的典型技术相比，使用HVSM的RNN具有更好的性能。</p><p>基于RNN的模型在不同的场景下都能优于基线分类器。</p><p><img src="/2019/12/11/Mining-Software-Repositories-in-the-age-of-AI/image-6.png" alt="image-6"></p>]]></content>
+    
+    <summary type="html">
+    
+      对Mining Software Repositories in the age of AI报告的记录与总结
+    
+    </summary>
+    
+    
+      <category term="NASAC2019" scheme="http://yoursite.com/categories/NASAC2019/"/>
+    
+      <category term="软件仓库挖掘论坛" scheme="http://yoursite.com/categories/NASAC2019/%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93%E6%8C%96%E6%8E%98%E8%AE%BA%E5%9D%9B/"/>
+    
+    
+      <category term="NASAC2019" scheme="http://yoursite.com/tags/NASAC2019/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2019/12/10/hello-world/"/>
     <id>http://yoursite.com/2019/12/10/hello-world/</id>
     <published>2019-12-10T02:02:14.794Z</published>
-    <updated>2019-12-10T08:48:05.074Z</updated>
+    <updated>2019-12-11T08:07:03.893Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="个人博客的第一篇文章"><a href="#个人博客的第一篇文章" class="headerlink" title="个人博客的第一篇文章"></a>个人博客的第一篇文章</h1><p>​        经过了两天的搭建，终于有了自己个人博客的雏形，基本符合自己的审美。</p><p>​        之前在CSDN的博客也是在学软件构造的时候老师强迫着写的，主要就是学习笔记。如今有了个人博客，不能浪费这么漂亮的页面，就像美丽的花园没有鲜花点缀一样。明年六月份就要毕业了，九月份就要研究生入学了，得勤快一点多学一点东西多记录一点东西，不然毕业啥都不会可咋整。</p><p>​        最后以最近看到的一句话收尾，“有险在前，唯刚健而不陷，方可涉大川。”</p>]]></content>
     
     <summary type="html">
     
-      Hello World
+      一些废话
     
     </summary>
     
