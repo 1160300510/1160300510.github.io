@@ -212,7 +212,7 @@
               2 categories in total
             </div>
             <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NASAC2019/">NASAC2019</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/NASAC2019/%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93%E6%8C%96%E6%8E%98%E8%AE%BA%E5%9D%9B/">软件仓库挖掘论坛</a><span class="category-list-count">1</span></li></ul></li></ul>
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NASAC2019/">NASAC2019</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/NASAC2019/%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93%E6%8C%96%E6%8E%98%E8%AE%BA%E5%9D%9B/">软件仓库挖掘论坛</a><span class="category-list-count">2</span></li></ul></li></ul>
             </div>
           </div>
         
@@ -361,6 +361,15 @@
   <div class="theme-info">Theme – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.6.0
   </div>
 
+
+  <script src='https://unpkg.com/mermaid@/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+
         
 
 
@@ -408,6 +417,19 @@
 
 
 
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme: 'forest',
+      logLevel: 3,
+      flowchart: { curve: 'linear' },
+      gantt: { axisFormat: '%m/%d/%Y' },
+      sequence: { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
 
 
   
