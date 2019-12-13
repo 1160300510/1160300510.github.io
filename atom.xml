@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-12T07:00:14.614Z</updated>
+  <updated>2019-12-12T08:44:26.882Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection</title>
+    <link href="http://yoursite.com/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/"/>
+    <id>http://yoursite.com/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/</id>
+    <published>2019-12-12T07:02:26.000Z</published>
+    <updated>2019-12-12T08:44:26.882Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection"><a href="#Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection" class="headerlink" title="Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection"></a>Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection</h1><p>相关文章：<a href="http://users.encs.concordia.ca/~shang/pubs/Armin_FSE_2019.pdf" target="_blank" rel="noopener">Bisecting Commits and Modeling Commit Risk during Testing</a></p><p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image1.png" alt="image1"></p><p>背景：</p><ul><li>Software testing is expensive</li><li>Too many test need to be run</li></ul><h2 id="RQ1-What-is-the-most-cost-effective-BatchSize-for-the-number-of-culprits-discovered-during-testing"><a href="#RQ1-What-is-the-most-cost-effective-BatchSize-for-the-number-of-culprits-discovered-during-testing" class="headerlink" title="RQ1: What is the most cost-effective BatchSize for the number of culprits discovered during testing?"></a>RQ1: What is the most cost-effective BatchSize for the number of culprits discovered during testing?</h2><p>Bisect介绍：</p><p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image2.png" alt="image2"></p><p>在这种情况下，需要跑五次测试，比单独挨个测试还要多。</p><p>Conclusion: The higher the CulpritRate the smaller the most costeffective BatchSize.</p><p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image3.png" alt="image3"></p><h2 id="RQ2-What-is-the-most-cost-effective-BatchSize-when-some-bisections-are-done-as-a-result-of-flaky-failures"><a href="#RQ2-What-is-the-most-cost-effective-BatchSize-when-some-bisections-are-done-as-a-result-of-flaky-failures" class="headerlink" title="RQ2: What is the most cost-effective BatchSize when some bisections are done as a result of flaky failures?"></a>RQ2: What is the most cost-effective BatchSize when some bisections are done as a result of flaky failures?</h2><p>The higher the FlakeRate the smaller the BatchSize and smaller the savings in executions.</p><p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image4.png" alt="image4"></p><p>TestTopK思想：</p><p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image5.png" alt="image5"></p><p>关键在于预测模型。之前对于commit-level bug prediction的研究可以帮助。Test history证明对于预测模型是有效的。</p><p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6341763" target="_blank" rel="noopener">A Large-Scale Empirical Study of Just-in-Time Quality Assurance</a></p><p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.702.9819&rep=rep1&type=pdf" target="_blank" rel="noopener">Commit Guru: Analytics and Risk Prediction of Software Commits</a></p><p><a href="https://users.encs.concordia.ca/~pcr/paper/Zhu2018ICSME.pdf" target="_blank" rel="noopener">Test Re-prioritization in Continuous Testing Environments</a></p><p>An example of calculating the culprit score</p><p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image6.png" alt="image6"></p><ul><li>Probability of a file A change cooccurring with Test 1 fail is 3/8=0.375</li><li>Normalized probobility of file A change and Test 1 fail is 0.375*(20/30)</li><li>Culprit score of commit 101 = 0.375<em>(20/30) + 0.25</em>(10/30)=0.33</li></ul><p>结果：</p><p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image7.png" alt="image7"></p>]]></content>
+    
+    <summary type="html">
+    
+      对Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection报告的记录与总结
+    
+    </summary>
+    
+    
+      <category term="NASAC2019" scheme="http://yoursite.com/categories/NASAC2019/"/>
+    
+      <category term="软件仓库挖掘论坛" scheme="http://yoursite.com/categories/NASAC2019/%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93%E6%8C%96%E6%8E%98%E8%AE%BA%E5%9D%9B/"/>
+    
+    
+      <category term="NASAC2019" scheme="http://yoursite.com/tags/NASAC2019/"/>
+    
+  </entry>
   
   <entry>
     <title>Mining Software Data for Better Software Quality</title>
