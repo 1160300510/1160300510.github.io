@@ -48,27 +48,23 @@
   };
 </script>
 
-  <meta name="description" content="对Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection报告的记录与总结">
+  <meta name="description" content="用两个栈实现队列 栈初始化和调用方式如下： 1&#x2F;**2 * Your CQueue object will be instantiated and called as such:3 * CQueue obj &#x3D; new CQueue();4 * obj.appendTail(value);5 * int param_2 &#x3D; obj.deleteHead();6 *&#x2F;  基本思想就是一个栈$Stac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection&#x2F;index.html">
+<meta property="og:title" content="leetcode每日一题-用两个栈实现队列">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;30&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97&#x2F;index.html">
 <meta property="og:site_name" content="Joker">
-<meta property="og:description" content="对Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection报告的记录与总结">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection&#x2F;image1.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection&#x2F;image2.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection&#x2F;image3.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection&#x2F;image4.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection&#x2F;image5.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection&#x2F;image6.png">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection&#x2F;image7.png">
-<meta property="article:published_time" content="2019-12-12T07:02:26.000Z">
-<meta property="article:modified_time" content="2019-12-12T08:44:26.882Z">
+<meta property="og:description" content="用两个栈实现队列 栈初始化和调用方式如下： 1&#x2F;**2 * Your CQueue object will be instantiated and called as such:3 * CQueue obj &#x3D; new CQueue();4 * obj.appendTail(value);5 * int param_2 &#x3D; obj.deleteHead();6 *&#x2F;  基本思想就是一个栈$Stac">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;30&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97&#x2F;image1.png">
+<meta property="article:published_time" content="2020-06-30T11:50:10.000Z">
+<meta property="article:modified_time" content="2020-06-30T11:59:36.650Z">
 <meta property="article:author" content="Joker">
-<meta property="article:tag" content="NASAC2019">
+<meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="栈">
+<meta property="article:tag" content="队列">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;12&#x2F;Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection&#x2F;image1.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;30&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97&#x2F;image1.png">
 
-<link rel="canonical" href="http://yoursite.com/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/">
+<link rel="canonical" href="http://yoursite.com/2020/06/30/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/">
 
 
 <script id="page-configurations">
@@ -80,7 +76,7 @@
   };
 </script>
 
-  <title>Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection | Joker</title>
+  <title>leetcode每日一题-用两个栈实现队列 | Joker</title>
   
 
 
@@ -197,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/30/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/joker.png">
@@ -210,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection
+          leetcode每日一题-用两个栈实现队列
         </h1>
 
         <div class="post-meta">
@@ -221,7 +217,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2019-12-12 15:02:26 / Modified: 16:44:26" itemprop="dateCreated datePublished" datetime="2019-12-12T15:02:26+08:00">2019-12-12</time>
+              <time title="Created: 2020-06-30 19:50:10 / Modified: 19:59:36" itemprop="dateCreated datePublished" datetime="2020-06-30T19:50:10+08:00">2020-06-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -229,20 +225,19 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/NASAC2019/" itemprop="url" rel="index">
-                    <span itemprop="name">NASAC2019</span>
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
                   </a>
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/NASAC2019/%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93%E6%8C%96%E6%8E%98%E8%AE%BA%E5%9D%9B/" itemprop="url" rel="index">
-                    <span itemprop="name">软件仓库挖掘论坛</span>
+                  <a href="/categories/leetcode/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" itemprop="url" rel="index">
+                    <span itemprop="name">每日一题</span>
                   </a>
                 </span>
             </span>
 
           
-            <div class="post-description">对Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection报告的记录与总结</div>
 
         </div>
       </header>
@@ -253,35 +248,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection"><a href="#Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection" class="headerlink" title="Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection"></a>Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection</h1><p>相关文章：<a href="http://users.encs.concordia.ca/~shang/pubs/Armin_FSE_2019.pdf" target="_blank" rel="noopener">Bisecting Commits and Modeling Commit Risk during Testing</a></p>
-<p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image1.png" alt="image1"></p>
-<p>背景：</p>
+        <h1 id="用两个栈实现队列"><a href="#用两个栈实现队列" class="headerlink" title="用两个栈实现队列"></a>用两个栈实现队列</h1><p><img src="/2020/06/30/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/image1.png" alt="image1"></p>
+<p>栈初始化和调用方式如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * Your CQueue object will be instantiated and called as such:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * CQueue obj = new CQueue();</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * obj.appendTail(value);</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * int param_2 = obj.deleteHead();</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> */</span></span></pre></td></tr></table></figure>
+
+<p>基本思想就是一个栈$Stack1$只用来入队列，另一个栈$Stack2$只用来出队列。当$Stack2$出队列时就弹栈，但栈为空时，就将$Stack1$中的数都弹栈并压入$Stack2$中，此时第二个栈中元素的顺序就是待删除的元素的顺序。代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CQueue</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    Stack&lt;Integer&gt; stack1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    Stack&lt;Integer&gt; stack2;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CQueue</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        stack1 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        stack2 = <span class="keyword">new</span> Stack&lt;Integer&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">appendTail</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        stack1.push(value);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">deleteHead</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(!stack2.empty())&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> stack2.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">        &#125;<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">if</span>(stack1.empty())&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">                <span class="keyword">return</span> -<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">            &#125;<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">                <span class="keyword">while</span>(!stack1.empty())&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">                    stack2.push(stack1.pop());</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">                &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">                <span class="keyword">return</span> stack2.pop();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
 <ul>
-<li>Software testing is expensive</li>
-<li>Too many test need to be run</li>
+<li>时间复杂度：$O(1)$。使用均摊分析可以得到。</li>
+<li>空间复杂度：$O(n)$。</li>
 </ul>
-<h2 id="RQ1-What-is-the-most-cost-effective-BatchSize-for-the-number-of-culprits-discovered-during-testing"><a href="#RQ1-What-is-the-most-cost-effective-BatchSize-for-the-number-of-culprits-discovered-during-testing" class="headerlink" title="RQ1: What is the most cost-effective BatchSize for the number of culprits discovered during testing?"></a>RQ1: What is the most cost-effective BatchSize for the number of culprits discovered during testing?</h2><p>Bisect介绍：</p>
-<p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image2.png" alt="image2"></p>
-<p>在这种情况下，需要跑五次测试，比单独挨个测试还要多。</p>
-<p>Conclusion: The higher the CulpritRate the smaller the most costeffective BatchSize.</p>
-<p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image3.png" alt="image3"></p>
-<h2 id="RQ2-What-is-the-most-cost-effective-BatchSize-when-some-bisections-are-done-as-a-result-of-flaky-failures"><a href="#RQ2-What-is-the-most-cost-effective-BatchSize-when-some-bisections-are-done-as-a-result-of-flaky-failures" class="headerlink" title="RQ2: What is the most cost-effective BatchSize when some bisections are done as a result of flaky failures?"></a>RQ2: What is the most cost-effective BatchSize when some bisections are done as a result of flaky failures?</h2><p>The higher the FlakeRate the smaller the BatchSize and smaller the savings in executions.</p>
-<p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image4.png" alt="image4"></p>
-<p>TestTopK思想：</p>
-<p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image5.png" alt="image5"></p>
-<p>关键在于预测模型。之前对于commit-level bug prediction的研究可以帮助。Test history证明对于预测模型是有效的。</p>
-<p><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6341763" target="_blank" rel="noopener">A Large-Scale Empirical Study of Just-in-Time Quality Assurance</a></p>
-<p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.702.9819&rep=rep1&type=pdf" target="_blank" rel="noopener">Commit Guru: Analytics and Risk Prediction of Software Commits</a></p>
-<p><a href="https://users.encs.concordia.ca/~pcr/paper/Zhu2018ICSME.pdf" target="_blank" rel="noopener">Test Re-prioritization in Continuous Testing Environments</a></p>
-<p>An example of calculating the culprit score</p>
-<p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image6.png" alt="image6"></p>
-<ul>
-<li>Probability of a file A change cooccurring with Test 1 fail is 3/8=0.375</li>
-<li>Normalized probobility of file A change and Test 1 fail is 0.375*(20/30)</li>
-<li>Culprit score of commit 101 = 0.375<em>(20/30) + 0.25</em>(10/30)=0.33</li>
-</ul>
-<p>结果：</p>
-<p><img src="/2019/12/12/Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection/image7.png" alt="image7"></p>
 
     </div>
 
@@ -291,7 +269,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/NASAC2019/" rel="tag"># NASAC2019</a>
+              <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+              <a href="/tags/%E6%A0%88/" rel="tag"># 栈</a>
+              <a href="/tags/%E9%98%9F%E5%88%97/" rel="tag"># 队列</a>
           </div>
 
         
@@ -300,13 +280,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/12/11/Mining-Software-Data-for-Better-Software-Quality/" rel="prev" title="Mining Software Data for Better Software Quality">
-      <i class="fa fa-chevron-left"></i> Mining Software Data for Better Software Quality
+    <a href="/2020/06/29/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0/" rel="prev" title="leetcode每日一题-数组中的第K个最大元素">
+      <i class="fa fa-chevron-left"></i> leetcode每日一题-数组中的第K个最大元素
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/26/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E7%A7%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E8%8A%82%E7%82%B9/" rel="next" title="leetcode每日一题-移除重复节点">
-      leetcode每日一题-移除重复节点 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -371,7 +348,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mining-Test-Execution-History-to-Support-Test-Selection-Prioritization-and-Guide-Bisection"><span class="nav-number">1.</span> <span class="nav-text">Mining Test Execution History to Support Test Selection, Prioritization, and Guide Bisection</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#RQ1-What-is-the-most-cost-effective-BatchSize-for-the-number-of-culprits-discovered-during-testing"><span class="nav-number">1.1.</span> <span class="nav-text">RQ1: What is the most cost-effective BatchSize for the number of culprits discovered during testing?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RQ2-What-is-the-most-cost-effective-BatchSize-when-some-bisections-are-done-as-a-result-of-flaky-failures"><span class="nav-number">1.2.</span> <span class="nav-text">RQ2: What is the most cost-effective BatchSize when some bisections are done as a result of flaky failures?</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#用两个栈实现队列"><span class="nav-number">1.</span> <span class="nav-text">用两个栈实现队列</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -530,6 +507,54 @@ if (document.querySelectorAll('pre.mermaid').length) {
   
 
   
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+
+    
 
   
 
