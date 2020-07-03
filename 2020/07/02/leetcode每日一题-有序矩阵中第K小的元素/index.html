@@ -48,16 +48,16 @@
   };
 </script>
 
-  <meta name="description" content="有序矩阵中第K小的元素 方法一：暴力法将矩阵中的元素存入一维数组，然后进行排序，返回下标为k-1的数。 1class Solution &amp;#123;2    public int kthSmallest(int[][] matrix, int k) &amp;#123;3        &#x2F;&#x2F; 暴力算法4        int rows &#x3D; matrix.length, columns &#x3D; matrix[0">
+  <meta name="description" content="有序矩阵中第K小的元素">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode每日一题-有序矩阵中第K小的元素">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;02&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%89%E5%BA%8F%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0&#x2F;index.html">
 <meta property="og:site_name" content="Joker">
-<meta property="og:description" content="有序矩阵中第K小的元素 方法一：暴力法将矩阵中的元素存入一维数组，然后进行排序，返回下标为k-1的数。 1class Solution &amp;#123;2    public int kthSmallest(int[][] matrix, int k) &amp;#123;3        &#x2F;&#x2F; 暴力算法4        int rows &#x3D; matrix.length, columns &#x3D; matrix[0">
+<meta property="og:description" content="有序矩阵中第K小的元素">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;02&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%89%E5%BA%8F%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0&#x2F;image1.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;02&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%89%E5%BA%8F%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0&#x2F;image2.png">
 <meta property="article:published_time" content="2020-07-02T15:30:42.000Z">
-<meta property="article:modified_time" content="2020-07-03T00:45:29.234Z">
+<meta property="article:modified_time" content="2020-07-03T10:40:20.940Z">
 <meta property="article:author" content="Joker">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="数组">
@@ -223,7 +223,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-03 08:45:29" itemprop="dateModified" datetime="2020-07-03T08:45:29+08:00">2020-07-03</time>
+                <time title="Modified: 2020-07-03 18:40:20" itemprop="dateModified" datetime="2020-07-03T18:40:20+08:00">2020-07-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -255,6 +255,8 @@
 
       
         <h1 id="有序矩阵中第K小的元素"><a href="#有序矩阵中第K小的元素" class="headerlink" title="有序矩阵中第K小的元素"></a>有序矩阵中第K小的元素</h1><p><img src="/2020/07/02/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%89%E5%BA%8F%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/image1.png" alt="image1"></p>
+<a id="more"></a>
+
 <h2 id="方法一：暴力法"><a href="#方法一：暴力法" class="headerlink" title="方法一：暴力法"></a>方法一：暴力法</h2><p>将矩阵中的元素存入一维数组，然后进行排序，返回下标为<code>k-1</code>的数。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">kthSmallest</span><span class="params">(<span class="keyword">int</span>[][] matrix, <span class="keyword">int</span> k)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 暴力算法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> rows = matrix.length, columns = matrix[<span class="number">0</span>].length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span>[] sorted = <span class="keyword">new</span> <span class="keyword">int</span>[rows * columns];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] row : matrix) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> num : row) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">               sorted[index++] = num;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        Arrays.sort(sorted);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> sorted[k - <span class="number">1</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 

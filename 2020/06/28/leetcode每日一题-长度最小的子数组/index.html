@@ -48,15 +48,15 @@
   };
 </script>
 
-  <meta name="description" content="长度最小的子数组 可以使用双指针解决此问题。定义两个指针$left$和$right$，分别表示子数组的左边界和右边界，维护变量$sum$存储子数组中的元素和（即从$nums[left]$到$nums[right]$的元素和）。 初始状态下，$left$和$right$都指向下标0，$sum$的值也为0。每一轮迭代，将$nums[right]$加到$sum$，如果$sum$的值$&gt;&#x3D;s$，则更">
+  <meta name="description" content="长度最小的子数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="leetcode每日一题-长度最小的子数组">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;28&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84&#x2F;index.html">
 <meta property="og:site_name" content="Joker">
-<meta property="og:description" content="长度最小的子数组 可以使用双指针解决此问题。定义两个指针$left$和$right$，分别表示子数组的左边界和右边界，维护变量$sum$存储子数组中的元素和（即从$nums[left]$到$nums[right]$的元素和）。 初始状态下，$left$和$right$都指向下标0，$sum$的值也为0。每一轮迭代，将$nums[right]$加到$sum$，如果$sum$的值$&gt;&#x3D;s$，则更">
+<meta property="og:description" content="长度最小的子数组">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;28&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84&#x2F;image1.png">
 <meta property="article:published_time" content="2020-06-28T09:37:12.000Z">
-<meta property="article:modified_time" content="2020-06-28T15:11:56.410Z">
+<meta property="article:modified_time" content="2020-07-03T10:40:10.207Z">
 <meta property="article:author" content="Joker">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="数组">
@@ -214,10 +214,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-06-28 17:37:12 / Modified: 23:11:56" itemprop="dateCreated datePublished" datetime="2020-06-28T17:37:12+08:00">2020-06-28</time>
+              <time title="Created: 2020-06-28 17:37:12" itemprop="dateCreated datePublished" datetime="2020-06-28T17:37:12+08:00">2020-06-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-07-03 18:40:10" itemprop="dateModified" datetime="2020-07-03T18:40:10+08:00">2020-07-03</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -248,6 +254,10 @@
 
       
         <h1 id="长度最小的子数组"><a href="#长度最小的子数组" class="headerlink" title="长度最小的子数组"></a>长度最小的子数组</h1><p><img src="/2020/06/28/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/image1.png" alt="image1"></p>
+<a id="more"></a>
+
+
+
 <p>可以使用双指针解决此问题。定义两个指针$left$和$right$，分别表示子数组的左边界和右边界，维护变量$sum$存储子数组中的元素和（即从$nums[left]$到$nums[right]$的元素和）。</p>
 <p>初始状态下，$left$和$right$都指向下标0，$sum$的值也为0。每一轮迭代，将$nums[right]$加到$sum$，如果$sum$的值$&gt;=s$，则更新子数组的最小长度，此时子数组的长度为$right-left+1$，然后将左指针$left$右移，即将$nums[left]$从$sum$中减去，直到$sum&lt;s$，在此过程中同样更新子数组最小长度，在每一轮迭代之后，将右指针$right$右移。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minSubArrayLen</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span>[] nums)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> n = nums.length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> left=<span class="number">0</span>, right=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> ans = n+<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">while</span>(right &lt; n)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">            sum += nums[right];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">while</span>(sum &gt;= s &amp;&amp; left&lt;=right)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">                ans = Math.min(ans, right-left+<span class="number">1</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">                sum = sum - nums[left];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">                left++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            right++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> ans==n+<span class="number">1</span> ? <span class="number">0</span> : ans;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
