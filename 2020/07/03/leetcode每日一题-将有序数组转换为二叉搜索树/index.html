@@ -48,22 +48,23 @@
   };
 </script>
 
-  <meta name="description" content="长度最小的子数组 可以使用双指针解决此问题。定义两个指针$left$和$right$，分别表示子数组的左边界和右边界，维护变量$sum$存储子数组中的元素和（即从$nums[left]$到$nums[right]$的元素和）。 初始状态下，$left$和$right$都指向下标0，$sum$的值也为0。每一轮迭代，将$nums[right]$加到$sum$，如果$sum$的值$&gt;&#x3D;s$，则更">
+  <meta name="description" content="将有序数组转换为二叉搜索树 树的结构为： 1&#x2F;**2 * Definition for a binary tree node.3 * public class TreeNode &amp;#123;4 *     int val;5 *     TreeNode left;6 *     TreeNode right;7 *     TreeNode(int x) &amp;#123; val &#x3D; x; &amp;#12">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode每日一题-长度最小的子数组">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;28&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84&#x2F;index.html">
+<meta property="og:title" content="leetcode每日一题-将有序数组转换为二叉搜索树">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;03&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%B0%86%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91&#x2F;index.html">
 <meta property="og:site_name" content="Joker">
-<meta property="og:description" content="长度最小的子数组 可以使用双指针解决此问题。定义两个指针$left$和$right$，分别表示子数组的左边界和右边界，维护变量$sum$存储子数组中的元素和（即从$nums[left]$到$nums[right]$的元素和）。 初始状态下，$left$和$right$都指向下标0，$sum$的值也为0。每一轮迭代，将$nums[right]$加到$sum$，如果$sum$的值$&gt;&#x3D;s$，则更">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;28&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84&#x2F;image1.png">
-<meta property="article:published_time" content="2020-06-28T09:37:12.000Z">
-<meta property="article:modified_time" content="2020-06-28T15:11:56.410Z">
+<meta property="og:description" content="将有序数组转换为二叉搜索树 树的结构为： 1&#x2F;**2 * Definition for a binary tree node.3 * public class TreeNode &amp;#123;4 *     int val;5 *     TreeNode left;6 *     TreeNode right;7 *     TreeNode(int x) &amp;#123; val &#x3D; x; &amp;#12">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;03&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%B0%86%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91&#x2F;image1.png">
+<meta property="article:published_time" content="2020-07-03T01:47:29.000Z">
+<meta property="article:modified_time" content="2020-07-03T01:57:55.842Z">
 <meta property="article:author" content="Joker">
 <meta property="article:tag" content="leetcode">
 <meta property="article:tag" content="数组">
+<meta property="article:tag" content="树">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;06&#x2F;28&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84&#x2F;image1.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;03&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%B0%86%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91&#x2F;image1.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/06/28/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/">
+<link rel="canonical" href="http://yoursite.com/2020/07/03/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%B0%86%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
 
 
 <script id="page-configurations">
@@ -75,7 +76,7 @@
   };
 </script>
 
-  <title>leetcode每日一题-长度最小的子数组 | Joker</title>
+  <title>leetcode每日一题-将有序数组转换为二叉搜索树 | Joker</title>
   
 
 
@@ -192,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/28/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/03/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%B0%86%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/joker.png">
@@ -205,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          leetcode每日一题-长度最小的子数组
+          leetcode每日一题-将有序数组转换为二叉搜索树
         </h1>
 
         <div class="post-meta">
@@ -216,7 +217,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-06-28 17:37:12 / Modified: 23:11:56" itemprop="dateCreated datePublished" datetime="2020-06-28T17:37:12+08:00">2020-06-28</time>
+              <time title="Created: 2020-07-03 09:47:29 / Modified: 09:57:55" itemprop="dateCreated datePublished" datetime="2020-07-03T09:47:29+08:00">2020-07-03</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,24 +248,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="长度最小的子数组"><a href="#长度最小的子数组" class="headerlink" title="长度最小的子数组"></a>长度最小的子数组</h1><p><img src="/2020/06/28/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E9%95%BF%E5%BA%A6%E6%9C%80%E5%B0%8F%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84/image1.png" alt="image1"></p>
-<p>可以使用双指针解决此问题。定义两个指针$left$和$right$，分别表示子数组的左边界和右边界，维护变量$sum$存储子数组中的元素和（即从$nums[left]$到$nums[right]$的元素和）。</p>
-<p>初始状态下，$left$和$right$都指向下标0，$sum$的值也为0。每一轮迭代，将$nums[right]$加到$sum$，如果$sum$的值$&gt;=s$，则更新子数组的最小长度，此时子数组的长度为$right-left+1$，然后将左指针$left$右移，即将$nums[left]$从$sum$中减去，直到$sum&lt;s$，在此过程中同样更新子数组最小长度，在每一轮迭代之后，将右指针$right$右移。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minSubArrayLen</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span>[] nums)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> n = nums.length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> left=<span class="number">0</span>, right=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> ans = n+<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">while</span>(right &lt; n)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">            sum += nums[right];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">while</span>(sum &gt;= s &amp;&amp; left&lt;=right)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">                ans = Math.min(ans, right-left+<span class="number">1</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">                sum = sum - nums[left];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">                left++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            right++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> ans==n+<span class="number">1</span> ? <span class="number">0</span> : ans;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+        <h1 id="将有序数组转换为二叉搜索树"><a href="#将有序数组转换为二叉搜索树" class="headerlink" title="将有序数组转换为二叉搜索树"></a>将有序数组转换为二叉搜索树</h1><p><img src="/2020/07/03/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E5%B0%86%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/image1.png" alt="image1"></p>
+<p>树的结构为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *     int val;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *     TreeNode left;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *     TreeNode right;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> * &#125;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="comment"> */</span></span></pre></td></tr></table></figure>
 
-<p><strong>复杂度分析</strong></p>
-<ul>
-<li>时间复杂度：$O(N)$</li>
-<li>空间复杂度：$O(1)$</li>
-</ul>
-<p>##进阶</p>
-<p>如果使用暴力法，即两次循环那么时间复杂度为$O(n^2)$。如果将第二层循环替代为二分查找，那么就可以将时间复杂度降为$O(nlogn)$。为了使用二分查找，需要额外创建一个数组 sums 用于存储数组 nums 的前缀和，其中$sums[i]$表示从$nums[0]$到$nums[i-1]$的和。得到前缀和之后，对于每个开始下标$i$，可通过二分查找得到大于或等于$i$ 的最小下标 $bound$ ，使得$sums[bound]-sums[i-1]&gt;=s$， 并更新子数组的最小长度，此时长度为$bound-(i-1)$。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minSubArrayLen</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span>[] nums)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> n = nums.length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> ans = n+<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span>[] sums = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>]; </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 为了方便计算，令 size = n + 1 </span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// sums[0] = 0 意味着前 0 个元素的前缀和为 0</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// sums[1] = A[0] 前 1 个元素的前缀和为 A[0]</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        <span class="comment">// 以此类推</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">            sums[i] = sums[i - <span class="number">1</span>] + nums[i - <span class="number">1</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> target = s + sums[i - <span class="number">1</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> bound = Arrays.binarySearch(sums, target);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">if</span> (bound &lt; <span class="number">0</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">                bound = -bound - <span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">if</span> (bound &lt;= n) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">                ans = Math.min(ans, bound - (i - <span class="number">1</span>));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> ans == n+<span class="number">1</span> ? <span class="number">0</span> : ans;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
-<p><strong>复杂度分析</strong></p>
+
+<p>使用递归的方式，每次取数组中间的数$mid$作为根节点，$mid$左边的递归构造左子树，$mid$右边的递归构造右子树。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">sortedArrayToBST</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(nums==<span class="keyword">null</span> || nums.length==<span class="number">0</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> buildBST(nums, <span class="number">0</span>, nums.length-<span class="number">1</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">buildBST</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(start &gt; end)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> mid = (start+end)/<span class="number">2</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">        TreeNode node = <span class="keyword">new</span> TreeNode(nums[mid]);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        node.left = buildBST(nums,start,mid-<span class="number">1</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        node.right = buildBST(nums,mid+<span class="number">1</span>,end);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> node;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong>：</p>
 <ul>
-<li>时间复杂度：$O(nlogn)$</li>
-<li>空间复杂度：$O(n)$</li>
+<li>时间复杂度：$O(n)$，数组中每个数字访问一次。</li>
+<li>空间复杂度：$O(logn)$，主要取决于递归栈的深度。</li>
 </ul>
 
     </div>
@@ -277,6 +273,7 @@
           <div class="post-tags">
               <a href="/tags/leetcode/" rel="tag"># leetcode</a>
               <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
+              <a href="/tags/%E6%A0%91/" rel="tag"># 树</a>
           </div>
 
         
@@ -285,13 +282,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/27/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E7%BC%BA%E5%A4%B1%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B0/" rel="prev" title="leetcode每日一题-缺失的第一个正数">
-      <i class="fa fa-chevron-left"></i> leetcode每日一题-缺失的第一个正数
+    <a href="/2020/07/02/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%89%E5%BA%8F%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/" rel="prev" title="leetcode每日一题-有序矩阵中第K小的元素">
+      <i class="fa fa-chevron-left"></i> leetcode每日一题-有序矩阵中第K小的元素
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/29/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0/" rel="next" title="leetcode每日一题-数组中的第K个最大元素">
-      leetcode每日一题-数组中的第K个最大元素 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -356,7 +350,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#长度最小的子数组"><span class="nav-number">1.</span> <span class="nav-text">长度最小的子数组</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#将有序数组转换为二叉搜索树"><span class="nav-number">1.</span> <span class="nav-text">将有序数组转换为二叉搜索树</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
