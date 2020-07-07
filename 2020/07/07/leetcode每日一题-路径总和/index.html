@@ -48,22 +48,22 @@
   };
 </script>
 
-  <meta name="description" content="最长重复子数组">
+  <meta name="description" content="路径总和">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode每日一题-最长重复子数组">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;01&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%80%E9%95%BF%E9%87%8D%E5%A4%8D%E5%AD%90%E6%95%B0%E7%BB%84&#x2F;index.html">
+<meta property="og:title" content="leetcode每日一题-路径总和">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;07&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C&#x2F;index.html">
 <meta property="og:site_name" content="Joker">
-<meta property="og:description" content="最长重复子数组">
-<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;01&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%80%E9%95%BF%E9%87%8D%E5%A4%8D%E5%AD%90%E6%95%B0%E7%BB%84&#x2F;image1.png">
-<meta property="article:published_time" content="2020-07-01T07:36:19.000Z">
-<meta property="article:modified_time" content="2020-07-03T10:40:00.412Z">
+<meta property="og:description" content="路径总和">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;07&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C&#x2F;image1.png">
+<meta property="article:published_time" content="2020-07-07T11:16:42.000Z">
+<meta property="article:modified_time" content="2020-07-07T11:27:04.934Z">
 <meta property="article:author" content="Joker">
 <meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="数组">
+<meta property="article:tag" content="树">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;01&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%80%E9%95%BF%E9%87%8D%E5%A4%8D%E5%AD%90%E6%95%B0%E7%BB%84&#x2F;image1.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;07&#x2F;07&#x2F;leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C&#x2F;image1.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/01/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%80%E9%95%BF%E9%87%8D%E5%A4%8D%E5%AD%90%E6%95%B0%E7%BB%84/">
+<link rel="canonical" href="http://yoursite.com/2020/07/07/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/">
 
 
 <script id="page-configurations">
@@ -75,7 +75,7 @@
   };
 </script>
 
-  <title>leetcode每日一题-最长重复子数组 | Joker</title>
+  <title>leetcode每日一题-路径总和 | Joker</title>
   
 
 
@@ -192,7 +192,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/01/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%80%E9%95%BF%E9%87%8D%E5%A4%8D%E5%AD%90%E6%95%B0%E7%BB%84/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/07/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/joker.png">
@@ -205,7 +205,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          leetcode每日一题-最长重复子数组
+          leetcode每日一题-路径总和
         </h1>
 
         <div class="post-meta">
@@ -214,16 +214,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2020-07-01 15:36:19" itemprop="dateCreated datePublished" datetime="2020-07-01T15:36:19+08:00">2020-07-01</time>
+              <time title="Created: 2020-07-07 19:16:42 / Modified: 19:27:04" itemprop="dateCreated datePublished" datetime="2020-07-07T19:16:42+08:00">2020-07-07</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-07-03 18:40:00" itemprop="dateModified" datetime="2020-07-03T18:40:00+08:00">2020-07-03</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -253,26 +247,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="最长重复子数组"><a href="#最长重复子数组" class="headerlink" title="最长重复子数组"></a>最长重复子数组</h1><p><img src="/2020/07/01/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%80%E9%95%BF%E9%87%8D%E5%A4%8D%E5%AD%90%E6%95%B0%E7%BB%84/image1.png" alt="image1"></p>
+        <h1 id="路径总和"><a href="#路径总和" class="headerlink" title="路径总和"></a>路径总和</h1><p><img src="/2020/07/07/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/image1.png" alt="image1"></p>
 <a id="more"></a>
 
+<p>树结构如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&#x2F;**</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"> * Definition for a binary tree node.</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"> * public class TreeNode &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"> *     int val;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"> *     TreeNode left;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"> *     TreeNode right;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"> *     TreeNode(int x) &#123; val &#x3D; x; &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"> * &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"> *&#x2F;</span></pre></td></tr></table></figure>
 
+<h2 id="方法一：递归"><a href="#方法一：递归" class="headerlink" title="方法一：递归"></a>方法一：递归</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathSum</span><span class="params">(TreeNode root, <span class="keyword">int</span> sum)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>((sum-root.val != <span class="number">0</span>) &amp;&amp; (root.left==<span class="keyword">null</span>) &amp;&amp; (root.right==<span class="keyword">null</span>))&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>((sum-root.val == <span class="number">0</span>) &amp;&amp; (root.left==<span class="keyword">null</span>) &amp;&amp; (root.right==<span class="keyword">null</span>))&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> hasPathSum(root.left, sum-root.val) || hasPathSum(root.right, sum-root.val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
-<h2 id="方法一：动态规划"><a href="#方法一：动态规划" class="headerlink" title="方法一：动态规划"></a>方法一：动态规划</h2><p>令<code>dp[i][j]</code>表示<code>A[i:]</code>和<code>B[j:]</code>的最长公共前缀，如果<code>A[i]==B[j]</code>，那么<code>dp[i][j] = dp[i+1][j+1]+1</code>，否则<code>dp[i][j]=0</code>。最后的结果就为所有<code>dp[i][j]</code>中的最大值。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLength</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> m = A.length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> n = B.length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[m+<span class="number">1</span>][n+<span class="number">1</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=m-<span class="number">1</span>; i&gt;=<span class="number">0</span>; i--)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=n-<span class="number">1</span>; j&gt;=<span class="number">0</span>; j--)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">                <span class="keyword">if</span>(A[i] == B[j])&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">                    dp[i][j] = dp[i+<span class="number">1</span>][j+<span class="number">1</span>]+<span class="number">1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">                &#125;<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">                    dp[i][j] = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">                &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">                ans = Math.max(ans, dp[i][j]);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">            &#125;  </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        &#125; </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> ans;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<p>我们只需要判断当前节点的值是否等于<code>sum - val</code>。</p>
+<p><strong>复杂度分析</strong>：</p>
+<ul>
+<li>时间复杂度：$O(N)$，其中$N$是数的节点数，对每个节点访问一次。</li>
+<li>空间复杂度：$O(H)$，$H$是树的高度，最坏情况是树呈现链状，空间开销为$O(N)$，平均情况下是$O(logN)$。</li>
+</ul>
+<h2 id="方法二：广度优先搜索"><a href="#方法二：广度优先搜索" class="headerlink" title="方法二：广度优先搜索"></a>方法二：广度优先搜索</h2><p>使用广度优先搜索的方式，记录从根节点到当前节点的路径和，以防止重复计算。</p>
+<p>这样我们使用两个队列，分别存储将要遍历的节点，以及根节点到这些节点的路径和即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasPathSum</span><span class="params">(TreeNode root, <span class="keyword">int</span> sum)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        Queue&lt;TreeNode&gt; queNode = <span class="keyword">new</span> LinkedList&lt;TreeNode&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        Queue&lt;Integer&gt; queVal = <span class="keyword">new</span> LinkedList&lt;Integer&gt;();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        queNode.offer(root);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        queVal.offer(root.val);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">while</span> (!queNode.isEmpty()) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">            TreeNode now = queNode.poll();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> temp = queVal.poll();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">if</span> (now.left == <span class="keyword">null</span> &amp;&amp; now.right == <span class="keyword">null</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">                <span class="keyword">if</span> (temp == sum) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">                &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">                <span class="keyword">continue</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">if</span> (now.left != <span class="keyword">null</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">                queNode.offer(now.left);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">                queVal.offer(now.left.val + temp);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">if</span> (now.right != <span class="keyword">null</span>) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">                queNode.offer(now.right);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">                queVal.offer(now.right.val + temp);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 
 <p><strong>复杂度分析</strong>：</p>
 <ul>
-<li>时间复杂度：$O(M \times N)$。其中$M$为数组A的长度，$N$为数组B的长度。</li>
-<li>空间复杂度：$O(M \times N)$。</li>
-</ul>
-<h2 id="方法二：滑动窗口"><a href="#方法二：滑动窗口" class="headerlink" title="方法二：滑动窗口"></a>方法二：滑动窗口</h2><p>枚举所有<code>A</code>和<code>B</code>的对齐方式，对齐的方式有两种：第一种是固定数组<code>B</code>，枚举数组<code>A</code>的任意一个数<code>A[i]</code>作为头部与数组<code>B</code>的头部<code>B[0]</code>对齐并计算重复子数组长度。第二种是固定数组<code>A</code>，进行同样操作。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findLength</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> m = A.length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> n = B.length;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> len = Math.min(m-i, n);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> maxlen = maxLength(A, B, i, <span class="number">0</span>, len);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">            ans = Math.max(ans, maxlen);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> len = Math.min(m, n-i);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">int</span> maxlen = maxLength(A, B, <span class="number">0</span>, i, len);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">            ans = Math.max(ans, maxlen);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> ans;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxLength</span><span class="params">(<span class="keyword">int</span>[] A, <span class="keyword">int</span>[] B, <span class="keyword">int</span> addA, <span class="keyword">int</span> addB, <span class="keyword">int</span> len)</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> k=<span class="number">0</span>, ret=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;len; i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">if</span>(A[addA+i] == B[addB+i])&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">                k++;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">            &#125;<span class="keyword">else</span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">                k = <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">            &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">            ret = Math.max(ret, k);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> ret;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-<p><strong>复杂度分析</strong></p>
-<ul>
-<li>时间复杂度：$O((M+N) \times min(M,N))$。</li>
-<li>空间复杂度：$O(1)$。</li>
+<li>时间复杂度：$O(N)$。</li>
+<li>空间复杂度：$O(N)$。</li>
 </ul>
 
     </div>
@@ -284,7 +280,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/leetcode/" rel="tag"># leetcode</a>
-              <a href="/tags/%E6%95%B0%E7%BB%84/" rel="tag"># 数组</a>
+              <a href="/tags/%E6%A0%91/" rel="tag"># 树</a>
           </div>
 
         
@@ -293,13 +289,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/06/30/leetcode-%E7%AC%AC195%E5%9C%BA%E5%91%A8%E8%B5%9B/" rel="prev" title="leetcode-第195场周赛">
-      <i class="fa fa-chevron-left"></i> leetcode-第195场周赛
+    <a href="/2020/07/06/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E4%B8%8D%E5%90%8C%E8%B7%AF%E5%BE%84II/" rel="prev" title="leetcode每日一题-不同路径II">
+      <i class="fa fa-chevron-left"></i> leetcode每日一题-不同路径II
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/07/02/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E6%9C%89%E5%BA%8F%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%AC%ACK%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/" rel="next" title="leetcode每日一题-有序矩阵中第K小的元素">
-      leetcode每日一题-有序矩阵中第K小的元素 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -364,7 +357,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#最长重复子数组"><span class="nav-number">1.</span> <span class="nav-text">最长重复子数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一：动态规划"><span class="nav-number">1.1.</span> <span class="nav-text">方法一：动态规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二：滑动窗口"><span class="nav-number">1.2.</span> <span class="nav-text">方法二：滑动窗口</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#路径总和"><span class="nav-number">1.</span> <span class="nav-text">路径总和</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一：递归"><span class="nav-number">1.1.</span> <span class="nav-text">方法一：递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二：广度优先搜索"><span class="nav-number">1.2.</span> <span class="nav-text">方法二：广度优先搜索</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
