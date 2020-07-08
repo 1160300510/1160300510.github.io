@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-07T11:27:04.934Z</updated>
+  <updated>2020-07-08T14:07:37.812Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode每日一题-跳水板</title>
+    <link href="http://yoursite.com/2020/07/08/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%B7%B3%E6%B0%B4%E6%9D%BF/"/>
+    <id>http://yoursite.com/2020/07/08/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%B7%B3%E6%B0%B4%E6%9D%BF/</id>
+    <published>2020-07-08T14:03:09.000Z</published>
+    <updated>2020-07-08T14:07:37.812Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="跳水板"><a href="#跳水板" class="headerlink" title="跳水板"></a>跳水板</h1><p><img src="/2020/07/08/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%B7%B3%E6%B0%B4%E6%9D%BF/image1.png" alt="image1"></p><a id="more"></a><p>思想很简单，没啥好说的了，就直接放代码吧。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] divingBoard(<span class="keyword">int</span> shorter, <span class="keyword">int</span> longer, <span class="keyword">int</span> k) &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(k==<span class="number">0</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">if</span>(shorter == longer)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;k*shorter&#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span>[] ans = <span class="keyword">new</span> <span class="keyword">int</span>[k+<span class="number">1</span>];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;=k; i++)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">            ans[i] = shorter*(k-i) + longer*i;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">return</span> ans;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure><p><strong>复杂度分析</strong></p><ul><li>时间复杂度：$O(k)$</li><li>空间复杂度：$O(k)$</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;跳水板&quot;&gt;&lt;a href=&quot;#跳水板&quot; class=&quot;headerlink&quot; title=&quot;跳水板&quot;&gt;&lt;/a&gt;跳水板&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/2020/07/08/leetcode%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98-%E8%B7%B3%E6%B0%B4%E6%9D%BF/image1.png&quot; alt=&quot;image1&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="http://yoursite.com/categories/leetcode/"/>
+    
+      <category term="每日一题" scheme="http://yoursite.com/categories/leetcode/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/"/>
+    
+    
+      <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
+    
+      <category term="数组" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode每日一题-路径总和</title>
